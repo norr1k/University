@@ -1,0 +1,7 @@
+﻿  classes.cpp
+c1xx : fatal  error C1083: Не удается открыть файл источник: ..\..\..\Standart\classes.cpp: No such file or directory,
+  defines.cpp
+c1xx : fatal  error C1083: Не удается открыть файл источник: ..\..\..\Standart\defines.cpp: No such file or directory,
+  timsort.cpp
+C:\Users\n0r1k\Documents\GitHub\University\timsort\timsort\timsort.cpp(62,11): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+  Создание кода...
