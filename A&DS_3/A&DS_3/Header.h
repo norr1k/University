@@ -1,32 +1,50 @@
+// Header.h
 #pragma once
 
+#include <functional>
+#include <queue>
+
 namespace my {
-	template <typename _T>
-	class TreeNode
-	{
-	public:
-		TreeNode(_T);
-		~TreeNode();
-		void insert(_T);
-		TreeNode<_T> remove(_T, TreeNode);
-		TreeNode max(TreeNode);
-		TreeNode min(TreeNode);
-	private:
-		_T value;
+    template <typename _T>
+    class TreeNode {
+    public:
+        TreeNode(int key, _T value);
+        ~TreeNode();
 
-		TreeNode* ptr_left, ptr_right;
-	};
+        void insert(int key, _T value);
+        TreeNode* remove(int key, TreeNode* root);
+        TreeNode* max(TreeNode* node);
+        TreeNode* min(TreeNode* node);
 
-	template <typename _T>
-	class AVL_tree : public TreeNode
-	{
-	public:
-		AVL_tree(_T); 
-		~AVL_tree();
-	private:
-		int heigth;
-	};
-	
+        void preorderTraversal(TreeNode* node, const std::function<void(int, _T)>& visit);
+        void inorderTraversal(TreeNode* node, const std::function<void(int, _T)>& visit);
+        void postorderTraversal(TreeNode* node, const std::function<void(int, _T)>& visit);
+
+    protected:
+        int key;
+        _T value;
+        TreeNode* ptr_left;
+        TreeNode* ptr_right;
+    };
+
+    template <typename _T>
+    class AVL_node : protected TreeNode<_T> {
+    public:
+        AVL_node(int key, _T value);
+        ~AVL_node();
+
+        int getHeight(AVL_node* node);
+        void updateHeight(AVL_node* node);
+        int getDifference(AVL_node* node);
+
+        void rightRotate(AVL_node*& root);
+        void leftRotate(AVL_node*& root);
+        void balance(AVL_node*& root);
+
+        void insert(AVL_node*& root, int key, _T value);
+        void levelOrderTraversal(AVL_node* root, const std::function<void(int, _T)>& visit);
+
+    protected:
+        int height;
+    };
 }
-
-
