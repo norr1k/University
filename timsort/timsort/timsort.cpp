@@ -1,6 +1,5 @@
 #include <iostream>
 #include <random>
-#include "C:\Users\n0r1k\Documents\GitHub\Standart\classes.cpp"
 #include <iostream>
 #include <vector>
 
@@ -164,9 +163,11 @@ void timSortGalloping(std::vector<int>& arr) {
 // Пример использования
 int main() {
     std::vector<int> arr = { 43, 21, 7, 23, 19, 15, 2, 10, 12, 9, 1, 33, 54, 12, 56, 32, 82, 432, 43, 53, 123, 43, 63, 23 };
+    std::cout << "unsorted arr: ";
+    for (int x : arr) std::cout << x << " ";
     timSortGalloping(arr);
 
-    std::cout << "sorted arr: ";
+    std::cout << "\nsorted arr: ";
     for (int x : arr) std::cout << x << " ";
     std::cout << std::endl;
     return 0;

@@ -1,4 +1,4 @@
 ﻿  timsort.cpp
-C:\Users\n0r1k\Documents\GitHub\University\timsort\timsort\timsort.cpp(60,11): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
-C:\Users\n0r1k\Documents\GitHub\University\timsort\timsort\timsort.cpp(146,11): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+C:\Users\n0r1k\Documents\GitHub\University\timsort\timsort\timsort.cpp(59,11): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+C:\Users\n0r1k\Documents\GitHub\University\timsort\timsort\timsort.cpp(145,11): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
   timsort.vcxproj -> C:\Users\n0r1k\Documents\GitHub\University\timsort\x64\Debug\timsort.exe
